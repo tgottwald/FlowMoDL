@@ -1,0 +1,24 @@
+_target_: models.flowmodl.FlowMoDL
+# Original MoDL architecture (Aggarwal, Mani & Jacob, IEEE TMI 2019) in the same
+# unrolled framework as FlowMoDL. Hyperparameters that are not architectural
+# choices match configs/model/flowmodl.yaml.
+denoiser_type: modl
+num_layers: 8              # unrolled cascades K (the MoDL paper uses 10)
+dc_iters: 10
+lam_init: 0.05
+decouple_readout: true     # implementation detail of the CG solver, not an architectural change
+use_checkpointing: true
+use_amp: true
+
+# --- Where the original method differs from FlowMoDL ---
+share_weights: true        # one denoiser shared by all cascades
+share_lam: true            # one DC weight shared by all cascades
+lam_usrate: false          # no acceleration conditioning
+cascade_film: false        # no cascade-index conditioning
+layer_params:
+  in_channels: 4
+  num_filters: 64
+  num_conv_layers: 5       # CNN depth: 4 conv/BN/ReLU layers + a final conv/BN
+  spatial_kernel: 3
+  spatial_padding_mode: replicate
+  zero_init_tail: false    # random initialisation of the last layer, as in the paper

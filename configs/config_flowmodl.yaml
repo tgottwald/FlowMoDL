@@ -1,0 +1,64 @@
+defaults:
+  - model: flowmodl
+  - loss: composite
+  - optimizer: adamw
+  - _self_
+
+seed: 42
+# Retrain even if a checkpoint for this run (wandb.name + seed) already exists.
+overwrite_existing: true
+checkpoint_dir: checkpoints
+
+data:
+  # Preprocessed TrainSet directory (see README, "Data preparation").
+  root: ${oc.env:FLOWMODL_DATA_ROOT}
+  split_path: data/dataset_splits.yaml
+  # Train on every case of the split, without checkpoint selection (see README).
+  train_on_all_data: false
+  assume_temporal_cycle: true
+  temporal_crop_size: 6
+  spatial_crop_size: [64, 64, 64] # (z, y, x); only x (readout) is cropped
+  spatial_edge_crop_prob: 0.0
+
+data_format: zarr
+
+training:
+  gradient_clip_val: 1.0
+  epochs: 50
+  accumulation_steps: 1
+  tau_multiplier: 1e-4
+  batch_size: 1
+  num_workers: 2
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+  reconstruct_target_on_gpu: true
+  reconstruct_temporal_chunk_size: null
+  # One cosine cycle over the run, stepped once per epoch.
+  lr_scheduler:
+    _target_: torch.optim.lr_scheduler.CosineAnnealingLR
+    T_max: ${training.epochs}
+    eta_min: 1e-6
+
+validation:
+  synthetic: true
+  compute_on_cpu: false
+  val_interval: 5
+  # Frequent monitoring (val/*).
+  val_accelerations: [30]
+  # Checkpoint selection (val_ckpt/*), every checkpoint_eval_every-th validation.
+  checkpoint_accelerations: [10, 30, 50]
+  checkpoint_eval_every: 2
+  batch_size: 1
+  num_workers: 0
+  prefetch_factor: 2
+  persistent_workers: false
+  pin_memory: false
+  reconstruct_target_on_gpu: true
+  reconstruct_temporal_chunk_size: 2
+  cache_in_memory: false
+
+wandb:
+  project: FlowMoDL
+  name: flowmodl
+  dir: ./tmp/wandb

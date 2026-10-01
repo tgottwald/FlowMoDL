@@ -1,0 +1,2 @@
+_target_: losses.FinalPredictionL1Loss
+# L1 loss on the final reconstruction only (FlowVN baseline).

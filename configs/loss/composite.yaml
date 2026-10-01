@@ -1,0 +1,15 @@
+_target_: losses.CompositeFlowLoss
+# FlowMoDL's composite loss (see CompositeFlowLoss in losses.py).
+lambda_vel: 0.1
+lambda_rel: 0.1
+lambda_ang: 0.1
+# Weight of background voxels in the image term (ROI voxels have weight 1).
+mag_bg_weight: 0.1
+# Curriculum: image term only until vel_warmup_start; the velocity and relative
+# error terms then ramp in linearly over vel_warmup_epochs, followed by the
+# angular term over ang_warmup_epochs (starting where the velocity ramp ends).
+vel_warmup_start: 8
+vel_warmup_epochs: 12
+ang_warmup_epochs: 12
+eps_rel: 1e-8
+eps_ang: 1e-8

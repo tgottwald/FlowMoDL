@@ -1,0 +1,64 @@
+# Original MoDL (Aggarwal, Mani & Jacob, IEEE TMI 2019) baseline: the published
+# CNN regulariser (configs/model/modl.yaml) trained with the published objective
+# (configs/loss/final_mse.yaml). Everything else matches config_flowmodl.yaml.
+#
+#   uv run train.py --config-name config_modl
+defaults:
+  - model: modl
+  - loss: final_mse
+  - optimizer: adamw
+  - _self_
+
+seed: 42
+overwrite_existing: true
+checkpoint_dir: checkpoints
+
+data:
+  root: ${oc.env:FLOWMODL_DATA_ROOT}
+  split_path: data/dataset_splits.yaml
+  train_on_all_data: false
+  assume_temporal_cycle: true
+  temporal_crop_size: 6
+  spatial_crop_size: [64, 64, 64] # (z, y, x); only x (readout) is cropped
+  spatial_edge_crop_prob: 0.0
+
+data_format: zarr
+
+training:
+  gradient_clip_val: 1.0
+  epochs: 50
+  accumulation_steps: 1
+  # Unused by FinalPredictionMSELoss, which supervises only the final cascade.
+  tau_multiplier: 1e-3
+  batch_size: 1
+  num_workers: 2
+  pin_memory: true
+  prefetch_factor: 2
+  persistent_workers: true
+  reconstruct_target_on_gpu: true
+  reconstruct_temporal_chunk_size: null
+  lr_scheduler:
+    _target_: torch.optim.lr_scheduler.CosineAnnealingLR
+    T_max: ${training.epochs}
+    eta_min: 1e-6
+
+validation:
+  synthetic: true
+  compute_on_cpu: false
+  val_interval: 5
+  val_accelerations: [30]
+  checkpoint_accelerations: [10, 30, 50]
+  checkpoint_eval_every: 2
+  batch_size: 1
+  num_workers: 0
+  prefetch_factor: 2
+  persistent_workers: false
+  pin_memory: false
+  reconstruct_target_on_gpu: true
+  reconstruct_temporal_chunk_size: 2
+  cache_in_memory: false
+
+wandb:
+  project: FlowMoDL
+  name: modl
+  dir: ./tmp/wandb

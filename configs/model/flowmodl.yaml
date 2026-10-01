@@ -1,0 +1,19 @@
+_target_: models.flowmodl.FlowMoDL
+denoiser_type: cnn
+num_layers: 8              # unrolled cascades K
+share_weights: false       # independent denoiser per cascade
+dc_iters: 30               # CG iterations J per cascade
+lam_init: 0.05
+lam_usrate: true           # condition the DC weight on the acceleration factor
+cascade_film: true         # cascade-index FiLM; only has an effect with share_weights: true
+decouple_readout: true     # readout axis to image space once, 2D FFTs in the CG solver (exact)
+use_checkpointing: true
+use_amp: true
+layer_params:
+  in_channels: 4           # velocity encodings, reconstructed jointly
+  num_filters: 64
+  num_blocks: 1            # residual (3+1)D blocks N
+  spatial_kernel: 3
+  temporal_kernel: 5
+  temporal_circular: false
+  spatial_padding_mode: replicate

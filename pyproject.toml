@@ -1,0 +1,37 @@
+[project]
+name = "flowmodl"
+version = "0.1.0"
+description = "FlowMoDL: model-based deep learning with conjugate-gradient data consistency for highly accelerated 4D flow MRI reconstruction"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "einops>=0.8.2",
+    "h5py>=3.16.0",
+    "hydra-core>=1.3.2",
+    "matplotlib>=3.10.9",
+    "numba>=0.65.1",
+    "numpy>=2.4.3",
+    "nvidia-cublas-cu12>=12.8.4.1",
+    "nvidia-cudnn-cu12>=9.19.0.56",
+    "nvidia-cusparse-cu12>=12.5.8.93",
+    "pyyaml>=6.0.3",
+    "scikit-image>=0.26.0",
+    "torch>=2.11.0",
+    "tqdm",
+    "wandb>=0.26.1",
+    "zarr>=3.1.6",
+]
+
+[[tool.uv.index]]
+name = "pytorch-cu128"
+url = "https://download.pytorch.org/whl/cu128"
+explicit = true  # This prevents uv from using this index for non-torch packages
+
+[tool.uv.sources]
+torch = { index = "pytorch-cu128" }
+torchaudio = { index = "pytorch-cu128" }
+
+[dependency-groups]
+dev = [
+    "gdown>=6.1.0",
+]

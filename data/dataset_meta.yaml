@@ -1,0 +1,64 @@
+metadata:
+  generated_at: '2026-07-16T11:41:53.658447'
+  total_cases: 138
+  split_type: random (center/scanner leakage not controlled for)
+train_distribution:
+  Center012:
+    total_samples: 12
+    scanners:
+      Philips_30T_Ingenia: 5
+      Philips_15T_Ambition: 7
+  Center007:
+    total_samples: 49
+    scanners:
+      GE_30T_Architect: 49
+  Center010:
+    total_samples: 2
+    scanners:
+      Phillips_30T_Ingenia: 2
+  Center008:
+    total_samples: 29
+    scanners:
+      GE_30T_Premier: 29
+  Center011:
+    total_samples: 4
+    scanners:
+      UIH_30T_uMR890: 4
+val_distribution:
+  Center010:
+    total_samples: 3
+    scanners:
+      Phillips_30T_Ingenia: 3
+  Center007:
+    total_samples: 13
+    scanners:
+      GE_30T_Architect: 13
+  Center008:
+    total_samples: 2
+    scanners:
+      GE_30T_Premier: 2
+  Center011:
+    total_samples: 2
+    scanners:
+      UIH_30T_uMR890: 2
+  Center012:
+    total_samples: 1
+    scanners:
+      Philips_15T_Ambition: 1
+test_distribution:
+  Center007:
+    total_samples: 13
+    scanners:
+      GE_30T_Architect: 13
+  Center012:
+    total_samples: 2
+    scanners:
+      Philips_15T_Ambition: 2
+  Center008:
+    total_samples: 5
+    scanners:
+      GE_30T_Premier: 5
+  Center010:
+    total_samples: 1
+    scanners:
+      Phillips_30T_Ingenia: 1

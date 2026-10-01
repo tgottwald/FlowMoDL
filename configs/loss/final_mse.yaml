@@ -1,0 +1,2 @@
+_target_: losses.FinalPredictionMSELoss
+# Original MoDL objective: mean squared error on the final reconstruction only.

@@ -1,0 +1,566 @@
+metadata:
+  generated_at: '2026-07-16T11:41:53.658447'
+  total_cases: 138
+  split_type: random (center/scanner leakage not controlled for)
+  seed: 42
+  train_frac: 0.7
+  val_frac: 0.15
+  test_frac: 0.15
+  note: Paths relative to the TrainSet directory.
+test_set:
+- id: P024
+  path: Aorta/Center007/GE_30T_Architect/P024
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P064
+  path: Aorta/Center007/GE_30T_Architect/P064
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P014
+  path: Aorta/Center007/GE_30T_Architect/P014
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P010
+  path: Aorta/Center012/Philips_15T_Ambition/P010
+  center: Center012
+  vendor: Philips_15T_Ambition
+- id: P009
+  path: Aorta/Center007/GE_30T_Architect/P009
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P017
+  path: Aorta/Center007/GE_30T_Architect/P017
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P075
+  path: Aorta/Center007/GE_30T_Architect/P075
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P025
+  path: Aorta/Center008/GE_30T_Premier/P025
+  center: Center008
+  vendor: GE_30T_Premier
+- id: P012
+  path: Aorta/Center008/GE_30T_Premier/P012
+  center: Center008
+  vendor: GE_30T_Premier
+- id: P007
+  path: Aorta/Center007/GE_30T_Architect/P007
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P002
+  path: Aorta/Center012/Philips_15T_Ambition/P002
+  center: Center012
+  vendor: Philips_15T_Ambition
+- id: P012
+  path: Aorta/Center007/GE_30T_Architect/P012
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P026
+  path: Aorta/Center008/GE_30T_Premier/P026
+  center: Center008
+  vendor: GE_30T_Premier
+- id: P032
+  path: Aorta/Center008/GE_30T_Premier/P032
+  center: Center008
+  vendor: GE_30T_Premier
+- id: P067
+  path: Aorta/Center007/GE_30T_Architect/P067
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P021
+  path: Aorta/Center008/GE_30T_Premier/P021
+  center: Center008
+  vendor: GE_30T_Premier
+- id: P003
+  path: Aorta/Center010/Phillips_30T_Ingenia/P003
+  center: Center010
+  vendor: Phillips_30T_Ingenia
+- id: P032
+  path: Aorta/Center007/GE_30T_Architect/P032
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P019
+  path: Aorta/Center007/GE_30T_Architect/P019
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P051
+  path: Aorta/Center007/GE_30T_Architect/P051
+  center: Center007
+  vendor: GE_30T_Architect
+- id: P022
+  path: Aorta/Center007/GE_30T_Architect/P022
+  center: Center007
+  vendor: GE_30T_Architect
+folds:
+  fold_0:
+    train:
+    - id: P005
+      path: Aorta/Center012/Philips_30T_Ingenia/P005
+      center: Center012
+      vendor: Philips_30T_Ingenia
+    - id: P068
+      path: Aorta/Center007/GE_30T_Architect/P068
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P004
+      path: Aorta/Center010/Phillips_30T_Ingenia/P004
+      center: Center010
+      vendor: Phillips_30T_Ingenia
+    - id: P060
+      path: Aorta/Center007/GE_30T_Architect/P060
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P002
+      path: Aorta/Center008/GE_30T_Premier/P002
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P008
+      path: Aorta/Center008/GE_30T_Premier/P008
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P053
+      path: Aorta/Center007/GE_30T_Architect/P053
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P011
+      path: Aorta/Center008/GE_30T_Premier/P011
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P066
+      path: Aorta/Center007/GE_30T_Architect/P066
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P035
+      path: Aorta/Center007/GE_30T_Architect/P035
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P004
+      path: Aorta/Center011/UIH_30T_uMR890/P004
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P041
+      path: Aorta/Center007/GE_30T_Architect/P041
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P039
+      path: Aorta/Center007/GE_30T_Architect/P039
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P005
+      path: Aorta/Center012/Philips_15T_Ambition/P005
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P042
+      path: Aorta/Center007/GE_30T_Architect/P042
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P024
+      path: Aorta/Center008/GE_30T_Premier/P024
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P002
+      path: Aorta/Center011/UIH_30T_uMR890/P002
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P018
+      path: Aorta/Center007/GE_30T_Architect/P018
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P043
+      path: Aorta/Center007/GE_30T_Architect/P043
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P022
+      path: Aorta/Center008/GE_30T_Premier/P022
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P008
+      path: Aorta/Center007/GE_30T_Architect/P008
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P048
+      path: Aorta/Center007/GE_30T_Architect/P048
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P031
+      path: Aorta/Center008/GE_30T_Premier/P031
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P004
+      path: Aorta/Center008/GE_30T_Premier/P004
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P013
+      path: Aorta/Center008/GE_30T_Premier/P013
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P027
+      path: Aorta/Center008/GE_30T_Premier/P027
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P010
+      path: Aorta/Center008/GE_30T_Premier/P010
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P019
+      path: Aorta/Center008/GE_30T_Premier/P019
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P016
+      path: Aorta/Center008/GE_30T_Premier/P016
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P001
+      path: Aorta/Center011/UIH_30T_uMR890/P001
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P007
+      path: Aorta/Center008/GE_30T_Premier/P007
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P002
+      path: Aorta/Center007/GE_30T_Architect/P002
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P014
+      path: Aorta/Center008/GE_30T_Premier/P014
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P006
+      path: Aorta/Center007/GE_30T_Architect/P006
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P025
+      path: Aorta/Center007/GE_30T_Architect/P025
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P074
+      path: Aorta/Center007/GE_30T_Architect/P074
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P047
+      path: Aorta/Center007/GE_30T_Architect/P047
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P005
+      path: Aorta/Center008/GE_30T_Premier/P005
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P006
+      path: Aorta/Center008/GE_30T_Premier/P006
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P038
+      path: Aorta/Center007/GE_30T_Architect/P038
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P013
+      path: Aorta/Center007/GE_30T_Architect/P013
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P001
+      path: Aorta/Center012/Philips_30T_Ingenia/P001
+      center: Center012
+      vendor: Philips_30T_Ingenia
+    - id: P020
+      path: Aorta/Center008/GE_30T_Premier/P020
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P016
+      path: Aorta/Center007/GE_30T_Architect/P016
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P069
+      path: Aorta/Center007/GE_30T_Architect/P069
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P059
+      path: Aorta/Center007/GE_30T_Architect/P059
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P006
+      path: Aorta/Center012/Philips_15T_Ambition/P006
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P034
+      path: Aorta/Center007/GE_30T_Architect/P034
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P006
+      path: Aorta/Center011/UIH_30T_uMR890/P006
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P045
+      path: Aorta/Center007/GE_30T_Architect/P045
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P046
+      path: Aorta/Center007/GE_30T_Architect/P046
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P003
+      path: Aorta/Center012/Philips_30T_Ingenia/P003
+      center: Center012
+      vendor: Philips_30T_Ingenia
+    - id: P049
+      path: Aorta/Center007/GE_30T_Architect/P049
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P004
+      path: Aorta/Center007/GE_30T_Architect/P004
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P004
+      path: Aorta/Center012/Philips_30T_Ingenia/P004
+      center: Center012
+      vendor: Philips_30T_Ingenia
+    - id: P028
+      path: Aorta/Center008/GE_30T_Premier/P028
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P033
+      path: Aorta/Center008/GE_30T_Premier/P033
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P003
+      path: Aorta/Center007/GE_30T_Architect/P003
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P020
+      path: Aorta/Center007/GE_30T_Architect/P020
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P036
+      path: Aorta/Center008/GE_30T_Premier/P036
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P044
+      path: Aorta/Center007/GE_30T_Architect/P044
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P055
+      path: Aorta/Center007/GE_30T_Architect/P055
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P006
+      path: Aorta/Center010/Phillips_30T_Ingenia/P006
+      center: Center010
+      vendor: Phillips_30T_Ingenia
+    - id: P021
+      path: Aorta/Center007/GE_30T_Architect/P021
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P035
+      path: Aorta/Center008/GE_30T_Premier/P035
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P023
+      path: Aorta/Center008/GE_30T_Premier/P023
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P001
+      path: Aorta/Center012/Philips_15T_Ambition/P001
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P029
+      path: Aorta/Center008/GE_30T_Premier/P029
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P010
+      path: Aorta/Center007/GE_30T_Architect/P010
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P001
+      path: Aorta/Center008/GE_30T_Premier/P001
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P011
+      path: Aorta/Center007/GE_30T_Architect/P011
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P015
+      path: Aorta/Center007/GE_30T_Architect/P015
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P054
+      path: Aorta/Center007/GE_30T_Architect/P054
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P070
+      path: Aorta/Center007/GE_30T_Architect/P070
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P015
+      path: Aorta/Center008/GE_30T_Premier/P015
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P009
+      path: Aorta/Center008/GE_30T_Premier/P009
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P017
+      path: Aorta/Center008/GE_30T_Premier/P017
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P026
+      path: Aorta/Center007/GE_30T_Architect/P026
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P072
+      path: Aorta/Center007/GE_30T_Architect/P072
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P004
+      path: Aorta/Center012/Philips_15T_Ambition/P004
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P003
+      path: Aorta/Center008/GE_30T_Premier/P003
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P065
+      path: Aorta/Center007/GE_30T_Architect/P065
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P030
+      path: Aorta/Center007/GE_30T_Architect/P030
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P028
+      path: Aorta/Center007/GE_30T_Architect/P028
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P002
+      path: Aorta/Center012/Philips_30T_Ingenia/P002
+      center: Center012
+      vendor: Philips_30T_Ingenia
+    - id: P008
+      path: Aorta/Center012/Philips_15T_Ambition/P008
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P009
+      path: Aorta/Center012/Philips_15T_Ambition/P009
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P034
+      path: Aorta/Center008/GE_30T_Premier/P034
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P023
+      path: Aorta/Center007/GE_30T_Architect/P023
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P027
+      path: Aorta/Center007/GE_30T_Architect/P027
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P036
+      path: Aorta/Center007/GE_30T_Architect/P036
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P058
+      path: Aorta/Center007/GE_30T_Architect/P058
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P063
+      path: Aorta/Center007/GE_30T_Architect/P063
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P071
+      path: Aorta/Center007/GE_30T_Architect/P071
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P007
+      path: Aorta/Center012/Philips_15T_Ambition/P007
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P029
+      path: Aorta/Center007/GE_30T_Architect/P029
+      center: Center007
+      vendor: GE_30T_Architect
+    val:
+    - id: P002
+      path: Aorta/Center010/Phillips_30T_Ingenia/P002
+      center: Center010
+      vendor: Phillips_30T_Ingenia
+    - id: P005
+      path: Aorta/Center007/GE_30T_Architect/P005
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P037
+      path: Aorta/Center007/GE_30T_Architect/P037
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P001
+      path: Aorta/Center010/Phillips_30T_Ingenia/P001
+      center: Center010
+      vendor: Phillips_30T_Ingenia
+    - id: P052
+      path: Aorta/Center007/GE_30T_Architect/P052
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P040
+      path: Aorta/Center007/GE_30T_Architect/P040
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P031
+      path: Aorta/Center007/GE_30T_Architect/P031
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P005
+      path: Aorta/Center010/Phillips_30T_Ingenia/P005
+      center: Center010
+      vendor: Phillips_30T_Ingenia
+    - id: P050
+      path: Aorta/Center007/GE_30T_Architect/P050
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P033
+      path: Aorta/Center007/GE_30T_Architect/P033
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P030
+      path: Aorta/Center008/GE_30T_Premier/P030
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P073
+      path: Aorta/Center007/GE_30T_Architect/P073
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P062
+      path: Aorta/Center007/GE_30T_Architect/P062
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P056
+      path: Aorta/Center007/GE_30T_Architect/P056
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P018
+      path: Aorta/Center008/GE_30T_Premier/P018
+      center: Center008
+      vendor: GE_30T_Premier
+    - id: P003
+      path: Aorta/Center011/UIH_30T_uMR890/P003
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P057
+      path: Aorta/Center007/GE_30T_Architect/P057
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P003
+      path: Aorta/Center012/Philips_15T_Ambition/P003
+      center: Center012
+      vendor: Philips_15T_Ambition
+    - id: P061
+      path: Aorta/Center007/GE_30T_Architect/P061
+      center: Center007
+      vendor: GE_30T_Architect
+    - id: P005
+      path: Aorta/Center011/UIH_30T_uMR890/P005
+      center: Center011
+      vendor: UIH_30T_uMR890
+    - id: P001
+      path: Aorta/Center007/GE_30T_Architect/P001
+      center: Center007
+      vendor: GE_30T_Architect
