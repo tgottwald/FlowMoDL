@@ -215,44 +215,14 @@ uv run predict.py --ckpt_path checkpoints/flowmodl_seed42_best.pth \
     --output_dir predictions
 ```
 
-## Repository structure
-
-```
-configs/                    Hydra configs (config_{flowmodl,modl,flowvn}.yaml + model/loss/optimizer groups)
-data/
-  dataset.py                training/validation/test dataset (cropping, masks, normalisation)
-  realdataset.py            dataset for data without ground truth (predict.py)
-  offline_preprocessing.py  .mat -> Zarr/HDF5 conversion
-  create_test_val_umasks.py fixed kt-Gaussian masks for validation and test
-  create_split.py           random train/val/test split
-  ktgaussian.py             kt-Gaussian mask generation
-  dataset_splits.yaml       split used in the paper
-models/
-  flowmodl.py               FlowMoDL (and the MoDL baseline)
-  flowvn.py                 FlowVN baseline
-  baselines.py              zero-filled and CG-SENSE
-utils/
-  sense.py                  centred FFTs, SENSE operators, conjugate gradient
-  metrics.py                nRMSE, SSIM, RelErr, AngErr, checkpoint ranking
-  inference.py              model loading and reconstruction helpers
-  transformations.py        ground truth reconstruction and k-space normalisation
-  bgc.py                    MSAC background phase correction
-losses.py                   training objectives
-train.py / evaluate.py / predict.py
-```
-
 ## Citation
 
 If you use this code, please cite:
 
 ```bibtex
-@inproceedings{gottwald2026flowmodl,
-  title     = {FlowMoDL: Model-Based Deep Learning with Conjugate-Gradient Data Consistency for Highly Accelerated 4D Flow MRI Reconstruction},
-  author    = {Gottwald, Tristan and Bruch, Michelle and Hassan, Mubashir-Ul and Alickovic, Fatma and Kloiber, Milan and Tenbrinck, Daniel and Panholzer, Torsten and Schaller, Melanie and Hutter, Jana},
-  year      = {2026}
-}
+TODO
 ```
 
 ## Acknowledgments
 
-This work was supported by DFG Heisenberg (502024488), ERC StG EARTHWORM (101165242), ERC Proof-of-concept grant SYNCWORM (101293293) and CAIMed – Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine (ZN4257). The MSAC background phase correction is adapted from [PCMRI-MSAC](https://github.com/lolacaro/PCMRI-MSAC).
+This work was supported by DFG Heisenberg (502024488), ERC StG EARTHWORM (101165242), ERC Proof-of-concept grant SYNCWORM (101293293) and CAIMed – Lower Saxony Center for Artificial Intelligence and Causal Methods in Medicine (ZN4257).
